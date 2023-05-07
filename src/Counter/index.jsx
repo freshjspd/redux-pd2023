@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import ACTION_TYPES from '../actions/actionTypes';
 
 function Counter(props) {
   const {value, inc, dec} = props;
@@ -14,8 +15,8 @@ function Counter(props) {
 
 const mapAcrions = (dispatch) => {
     return{
-        inc: () => dispatch({type: 'INC'}),
-        dec: () => dispatch({type: 'DEC'}),
+        inc: () => dispatch({type: ACTION_TYPES.INC}),
+        dec: () => dispatch({type: ACTION_TYPES.DEC}),
     }
 }
 
