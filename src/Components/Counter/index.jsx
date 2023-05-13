@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import ACTION_TYPES from '../actions/actionTypes';
-import * as actionsCreators from '../actions/actionCreators';
+import ACTION_TYPES from '../../actions/actionTypes';
+import * as actionsCreators from '../../actions/actionCreators';
 
 function Counter(props) {
   const {value, inc, dec, step, setStep} = props;
