@@ -7,4 +7,8 @@ export const dec = () => ({type: ACTION_TYPES.DEC});
 export const setStep = (newValue) => ({
     type: ACTION_TYPES.SET_STEP,
     value: newValue,
+});
+
+export const setTheme = () => ({
+    type: ACTION_TYPES.SET_THEME,
 })
