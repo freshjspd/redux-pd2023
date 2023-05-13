@@ -2,6 +2,7 @@ import React from 'react'
 import {Formik, Form, Field} from 'formik';
 import {CreateUser} from '../../../slices/userSlice';
 import { connect } from 'react-redux';
+import VSCreateUser from '../../validate/VSCreateUser';
 
 function CreateUserForm(props) {
     const {createAction} = props;
@@ -13,6 +14,7 @@ function CreateUserForm(props) {
                     name: '',
                     surname: ''
                 }}
+                validationSchema={VSCreateUser}
                 onSubmit={(values) => {createAction(values);}}
             >
             <Form>
