@@ -1,12 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../reducers/CounterReducer';
-import themeReducer from '../reducers/ThemeReducer';
+import rootReducer from './rootReducer';
 
-const store = configureStore({
-  reducer: {
-    counterReducer,
-    themeReducer,
-  },
-});
+const store = configureStore({reducer: rootReducer});
 
 export default store;
