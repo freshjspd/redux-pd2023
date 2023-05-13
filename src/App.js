@@ -1,10 +1,10 @@
 import './App.css';
-import UserList from './Components/UserList';
+import UsersInfoPage from './Pages/UsersInfoPage';
 
 function App() {
   return (
     <>
-      <UserList />
+      <UsersInfoPage />
     </>
   );
 }
