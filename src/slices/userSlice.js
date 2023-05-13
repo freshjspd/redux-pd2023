@@ -21,23 +21,23 @@ export const userSlice = createSlice({
   },
   reducers: {
     CreateUser: (state, action) => {
-        const newUser = {...action.data, id: i++};
+        const newUser = {...action.payload, id: i++};
         const updDB = [...state.users, newUser];
         state.users = updDB;
     },
     GetUser: (state, action) => {
-        const findUserIndex = state.users.findIndex( u => action.data.id == u.id);
+        const findUserIndex = state.users.findIndex( u => action.payload == u.id);
         state.currentUser = state.users[findUserIndex];
     },
     UpdateUser: (state, action) => {
         const updDB = [...state.users];
-        const findUserIndex = state.users.findIndex( u => action.data.id == u.id);
-        updDB[findUserIndex] = {...updDB[findUserIndex], ...action.data};
+        const findUserIndex = state.users.findIndex( u => action.payload.id == u.id);
+        updDB[findUserIndex] = {...updDB[findUserIndex], ...action.payload};
         state.users= updDB;
     },
     DeleteUser: (state, action) => {
         const updDB = [...state.users];
-        updDB.splice(updDB.findIndex(u => action.id == u.id),1);
+        updDB.splice(updDB.findIndex(u => action.payload == u.id),1);
         state.users = updDB;
     }
   }

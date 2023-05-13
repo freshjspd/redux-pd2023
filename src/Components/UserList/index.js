@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import ACTION_TYPES from '../../actions/actionTypes';
-import * as actionsCreators from '../../actions/actionCreators';
+import {GetUser, CreateUser, DeleteUser, UpdateUser} from '../../slices/userSlice'
 
 function UserList(props) {
   const {users, error, isLoading, currentUser,
@@ -31,10 +30,10 @@ function UserList(props) {
 
 const mapActions = (dispatch) => {
   return{
-      getAction: (id) => dispatch(actionsCreators.getUser(id)),
-      createAction: (data) => dispatch(actionsCreators.createUser(data)),
-      updateAction: (data) => dispatch(actionsCreators.updateUser(data)),
-      deleteAction: (id) => dispatch(actionsCreators.deleteUser(id)),
+      getAction: (id) => dispatch(GetUser(id)),
+      createAction: (data) => dispatch(CreateUser(data)),
+      updateAction: (data) => dispatch(UpdateUser(data)),
+      deleteAction: (id) => dispatch(DeleteUser(id)),
   }
 }
 
