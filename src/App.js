@@ -1,10 +1,10 @@
 import './App.css';
-import ThemeSwitcher from './Components/ThemeSwitcher';
+import UserList from './Components/UserList';
 
 function App() {
   return (
     <>
-      <ThemeSwitcher />
+      <UserList />
     </>
   );
 }

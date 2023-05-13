@@ -11,4 +11,21 @@ export const setStep = (newValue) => ({
 
 export const setTheme = () => ({
     type: ACTION_TYPES.SET_THEME,
+});
+
+export const createUser = (data) => ({
+    type: ACTION_TYPES.CREATE_USER,
+    data: data
+});
+export const getUser = (id) => ({
+    type: ACTION_TYPES.READ_USER,
+    id: id,
+});
+export const updateUser = (data) => ({
+    type: ACTION_TYPES.UPDATE_USER,
+    data: data,
+});
+export const deleteUser = (id) => ({
+    type: ACTION_TYPES.DELETE_USER,
+    id: id,
 })
