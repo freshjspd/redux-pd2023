@@ -15,7 +15,11 @@ function CreateUserForm(props) {
                     surname: ''
                 }}
                 validationSchema={VSCreateUser}
-                onSubmit={(values) => {createAction(values);}}
+                onSubmit={(values, bag) => {
+                    createAction(values);
+                    console.log('bags',bag);
+                    bag.resetForm();
+                }}
             >
             <Form>
                 <label htmlFor="name">Name</label>
